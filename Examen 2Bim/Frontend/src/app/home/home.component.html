@@ -2,6 +2,15 @@
 
   <div class="col-sm-12">
 
+    <app-menu></app-menu>
+  </div>
+</div>
+<br>
+<br>
+<div class="row">
+
+  <div class="col-sm-12">
+
     <form class="example" style="margin:auto;max-width:300px">
 
       <br>
@@ -9,13 +18,30 @@
       <div class="col-sm-6">
       <form class="example-form">
         <mat-form-field class="example-full-width">
-          <input matInput placeholder="Busqueda">
+          <input type="text" matInput placeholder="Busqueda" (keyup)="busqueda($event)">
         </mat-form-field>
         <div class="col-sm-6">
-        <button type="button" ><i class="fa fa-search"></i></button>
+        <button type="button" (click)="getProfile()" ><i class="fa fa-search"></i></button>
         </div>
     </form>
       </div>
     </form>
+  </div>
+</div>
+
+<div class="row">
+
+  <div class="col-sm-12">
+
+   <app-sistema-operativo [SistemaOperativo]="SistemaOperativo"></app-sistema-operativo>
+  </div>
+</div>
+<br>
+<br>
+<div class="row">
+
+  <div class="col-sm-12">
+
+    <app-programas [programa] = "Programas"> </app-programas>
   </div>
 </div>

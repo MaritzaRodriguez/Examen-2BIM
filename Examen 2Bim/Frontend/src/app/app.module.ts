@@ -11,6 +11,13 @@ import {MatButtonModule, MatCheckboxModule} from '@angular/material';
 import {MatIconModule} from '@angular/material/icon';
 import {MatInputModule} from '@angular/material/input';
 import { CarritoComponent } from './carrito/carrito.component';
+import {RouterModule} from "@angular/router";
+import {RUTAS} from "./app.Rutas";
+import { SistOperativoDetalleComponent } from './sist-operativo-detalle/sist-operativo-detalle.component';
+import {HttpClientModule} from "@angular/common/http";
+import { ProgramaDetalleComponent } from './programa-detalle/programa-detalle.component';
+import { ClienteComponent } from './cliente/cliente.component';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -19,15 +26,22 @@ import { CarritoComponent } from './carrito/carrito.component';
     MenuComponent,
     ProgramasComponent,
     SistemaOperativoComponent,
-    CarritoComponent
+    CarritoComponent,
+    SistOperativoDetalleComponent,
+    ProgramaDetalleComponent,
+    ClienteComponent
   ],
   imports: [
     BrowserModule,
+    RouterModule.forRoot(RUTAS,{useHash:true}),
     BrowserAnimationsModule,
     MatInputModule,
+    HttpClientModule,
     MatButtonModule,
     MatCheckboxModule,
-    MatIconModule
+    MatIconModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

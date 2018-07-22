@@ -6,18 +6,18 @@
 </div>
 
 <div class="row" style="margin-left: 20px; margin-top: 20px">
-   <div class="col-sm-2">
+   <div class="col-sm-2" *ngFor="let info of SistemaOperativo">
     <div class="card" style="width: 300px;">
       <div class="card-body">
-
-        <h3 class="card-title"> Nombre Sistema Operativo</h3>
+        <img class="card-img-top" src={{info.imagen}} alt="Card image cap" >
+        <h3 class="card-title"> {{info.nombre}}</h3>
         <br>
-        <h6 class="card-subtitle mb-2 text-muted">Nombre: </h6>
-        <h6 class="card-subtitle mb-2 text-muted">Version Api: </h6>
-        <h6 class="card-subtitle mb-2 text-muted">Fecha Lanzamiento: </h6>
-        <h6 class="card-subtitle mb-2 text-muted">Peso GB: </h6>
-        <h6 class="card-subtitle mb-2 text-muted">Instalado: </h6>
-
+        <!--<h6 class="card-subtitle mb-2 text-muted">Nombre: </h6>-->
+        <h6 class="card-subtitle mb-2 text-muted">Version Api: {{info.versionApi}}</h6>
+        <!--<h6 class="card-subtitle mb-2 text-muted">Fecha Lanzamiento: </h6>-->
+        <!--<h6 class="card-subtitle mb-2 text-muted">Peso GB: </h6>-->
+        <!--<h6 class="card-subtitle mb-2 text-muted">Instalado: </h6>-->
+        <button type="button" [routerLink]="['/sistemaOperativo', info.id]" (click)="datos()" class="btn btn-primary">Detalle</button>
       </div>
     </div>
 

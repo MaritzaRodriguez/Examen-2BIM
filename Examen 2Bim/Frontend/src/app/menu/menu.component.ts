@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {Servicio} from "../Servicios/servicio";
 
 @Component({
   selector: 'app-menu',
@@ -7,8 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MenuComponent implements OnInit {
 
-  constructor() { }
 
+  items: any;
+
+  constructor(private _programaServicio: Servicio) {
+    this._programaServicio.mensajeActual3.subscribe(mensaje => this.items = mensaje);
+  }
   ngOnInit() {
   }
 

@@ -1,0 +1,36 @@
+<div class="row">
+  <div class="col-sm-12">
+    <br>
+    <h2 style="padding-left: 40px">Aplicacion</h2>
+  </div>
+</div>
+<div class="row">
+
+  <div class="col-sm-12">
+
+    <app-menu></app-menu>
+  </div>
+</div>
+<br>
+<br>
+<div class="row">
+<div class="row" style="margin-left: 20px; margin-top: 20px">
+  <div class="col-sm-2" >
+    <div class="card" style="width: 300px;">
+      <div class="card-body">
+        <img class="card-img-top" src={{programa.imagen}} alt="Card image cap" >
+        <h3 class="card-title">{{programa.nombre}}</h3>
+        <br>
+        <h6 class="card-subtitle mb-2 text-muted">Peso GB: {{programa.pesoGB}}</h6>
+        <h6 class="card-subtitle mb-2 text-muted">Version: {{programa.version}}</h6>
+        <h6 class="card-subtitle mb-2 text-muted">Nombre: {{programa.nombre}}</h6>
+        <h6 class="card-subtitle mb-2 text-muted">Url Descarga: {{programa.url}} </h6>
+        <h6 class="card-subtitle mb-2 text-muted">Fecha Lanzamiento: {{programa.fechaLanzamiento}} </h6>
+        <h6 class="card-subtitle mb-2 text-muted">Costo: {{programa.costo}}</h6>
+
+        <button id="botonAgregarCarrito" type="button" (click)="agregarDatos(programa.id)" [routerLink]="['/home']" class="btn btn-primary">Añadir</button>
+      </div>
+    </div>
+
+  </div>
+</div>

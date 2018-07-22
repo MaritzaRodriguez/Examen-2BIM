@@ -13,6 +13,10 @@ module.exports = {
       type: 'string',
       required: true
     },
+    imagen: {
+      type: 'string',
+      required: true
+    },
     versionApi: {
       type: 'number',
       required: true

@@ -21,6 +21,10 @@ module.exports = {
       type: 'string',
       required: true
     },
+    imagen: {
+      type: 'string',
+      required: true
+    },
     url: {
       type: 'string',
       required: true
@@ -33,8 +37,12 @@ module.exports = {
       type: 'number',
       required: true
     },
+    estado: {
+      type: 'boolean',
+      required: true
+    },
    aplicacion:{
-      model:'Programa',
+      model:'SistemaOperativo',
     }
   },
 

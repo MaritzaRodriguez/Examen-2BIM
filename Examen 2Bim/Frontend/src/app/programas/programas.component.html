@@ -6,20 +6,20 @@
 </div>
 
 <div class="row" style="margin-left: 20px; margin-top: 20px">
-  <div class="col-sm-2">
+  <div class="col-sm-2" *ngFor="let info of programa">
     <div class="card" style="width: 300px;">
       <div class="card-body">
-
-        <h3 class="card-title">Nombre Aplicacion</h3>
+        <img class="card-img-top" src={{info.imagen}} alt="Card image cap" >
+        <h3 class="card-title">{{info.nombre}}</h3>
         <br>
-        <h6 class="card-subtitle mb-2 text-muted">Peso GB: </h6>
-        <h6 class="card-subtitle mb-2 text-muted">Version: </h6>
-        <h6 class="card-subtitle mb-2 text-muted">Nombre: </h6>
-        <h6 class="card-subtitle mb-2 text-muted">Url Descarga: </h6>
-        <h6 class="card-subtitle mb-2 text-muted">Fecha Lanzamiento: </h6>
-        <h6 class="card-subtitle mb-2 text-muted">Costo: </h6>
+        <!--<h6 class="card-subtitle mb-2 text-muted">Peso GB: </h6>-->
+        <h6 class="card-subtitle mb-2 text-muted">Version: {{info.version}}</h6>
+        <!--<h6 class="card-subtitle mb-2 text-muted">Nombre: </h6>-->
+        <!--<h6 class="card-subtitle mb-2 text-muted">Url Descarga: </h6>-->
+        <!--<h6 class="card-subtitle mb-2 text-muted">Fecha Lanzamiento: </h6>-->
+        <!--<h6 class="card-subtitle mb-2 text-muted">Costo: </h6>-->
         <!--<h6 class="card-subtitle mb-2 text-muted">Sistema operativo id: </h6>-->
-
+        <button type="button" class="btn btn-primary" [routerLink]="['/sistemaOperativo',identificador(info.aplicacion),'programa',info.id]">Detalle</button>
       </div>
     </div>
 
